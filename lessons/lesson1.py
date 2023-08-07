@@ -29,7 +29,6 @@ class People:
         return f'age:{self.age} \n' \
                f'name is {self.name}\n'
 
-
     def __len__(self):
         return len(f'{self.name} {self.age}')
 
