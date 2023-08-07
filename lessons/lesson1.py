@@ -14,7 +14,7 @@ def p1(l):
 print(p1(1))
 
 
-class People:
+class People: #родительский класс
     # свойства
     body=True
     head=1
@@ -45,3 +45,4 @@ people2=People('Ерлан',15)
 print(people2)
 
 print(len(people2))
+
