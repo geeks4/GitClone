@@ -1,9 +1,9 @@
 from lesson1 import People, people2
 
 
-# 4 принципы ооп - наследование - полимаорфизм инкапсуляция обстракция
+# 4 принципы ооп - наследование  полимаорфизм обстракция
 
-class Student(People):  # дочерний класс
+class Student(People):  #дочерний класс
 
     def __init__(self, name, age, view):
         People.__init__(self, name, age)
@@ -33,7 +33,6 @@ class Teach(Student):
         People.print(self)
 
     def __str__(self):...
-
 
 
 beka = Teach('beka', 20, 0)
