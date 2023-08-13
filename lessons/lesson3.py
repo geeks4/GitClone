@@ -5,27 +5,37 @@
 
 class Bank:
     def __init__(self, name, age, money, password):
-        self.name = name
-        self.age = age
-        self._money = money
+        self.__name = name
+        self.__age = age
+        self.__money = money
         self.__passw = password
 
-    def pname(self):
-        print(self.name, self._money)
+    @property
+    def data(self):
+      return self.__name + ' имеет ' + self.__money + ' денег '
+    @ data.setter
+    def data(self, sentence):
+       __name, rand, __money = sentence.split(' ')
+       self.__name = __name
+       self.__money = __money
 
+    # def pname(self):
+    #     print(self.__name, self.__money)
+
+    @property
     def __ppas(self):
-        print(self.__passw)
+        return self.__passw and self.__age
+    @__ppas.setter
+    def password(self):
+        print(self.__age,self.__passw)
 
-    def pasww(self):
-        self.__ppas()
+    def print(self):
+        print(f'Возраст:{self.__age}, Пароль:{self.__passw}')
 
-beka = Bank('бека', 20, 0, '12345678987543')
-beka._money = 123456789
+beka = Bank('бека', 20, '0', '12345678987543')
+print(beka.data)
+print(beka.print())
 
-print(beka._money)
-beka.pname()
-
-beka.__passw = '0'
-print(beka.__passw)
-beka.pasww()
-print(dir(Bank))
+# print(beka._money)
+# beka._money = 123456789
+# print(dir(Bank))
