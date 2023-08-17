@@ -24,17 +24,17 @@ class Bank:
 
     @property
     def __ppas(self):
-        return self.__passw and self.__age
+        return 'паспорт' + self.__passw  self.__age
     @__ppas.setter
     def password(self):
-        print(self.__age,self.__passw)
+        return f'{self.__age}  {self.__passw}'
 
     def print(self):
         print(f'Возраст:{self.__age}, Пароль:{self.__passw}')
 
 beka = Bank('бека', 20, '0', '12345678987543')
 print(beka.data)
-print(beka.print())
+print(beka.password)
 
 # print(beka._money)
 # beka._money = 123456789
